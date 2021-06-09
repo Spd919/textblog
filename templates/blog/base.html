@@ -1,0 +1,65 @@
+<!doctype html>
+{% load static %}
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BLOG</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">
+    <!-- Bootstrap core CSS -->
+    <link href="{% static '/assets/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="{% static '/css/blog/cover.css' %}" rel="stylesheet">
+  </head>
+  <body class="d-flex h-100 text-center text-white bg-dark">
+
+  <div id="quote" class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto">
+      <div>
+        <h3 class="float-md-start mb-0">BLOG</h3>
+        <nav class="nav nav-masthead justify-content-center float-md-end">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="px-3">
+      <h1>Without science, everything is a miracle.</h1>
+      <p class="lead m-4 p-4">LAWRENCE M. KRAUSS</p>
+    </div>
+
+    <footer class="mt-auto text-white-50 ">
+      <p class="float-start">Quotes was pulled from <a href="http://www.notable-quotes.com/s/science_quotes.html" class="text-white">this site</a>.</p>
+    </footer>
+  </div>
+
+<!--  this block is article list  -->
+  <container id="articles" style="display: none;">
+    {% block content %}
+    {% endblock %}
+  </container>
+
+  <script src="{% static 'js/toggle-quote.js' %}"></script> 
+  </body>
+</html>
