@@ -15,13 +15,15 @@ function toggleDisplayArticle() {
     }
 }
 
+function change() {
+  const elements = document.querySelectorAll(".sci-quote");
+  for (let element of elements) {
+    element.classList.toggle("transformed-state");
+  }
+}
+
 window.addEventListener('load', (event) => {
     window.setTimeout(function() {
-        toggleDisplayQuote();
-        toggleDisplayArticle();
-      }, 5000);
-      window.setTimeout(function() {
-        toggleDisplayQuote();
-        toggleDisplayArticle();
-      }, 8000);
+        change();
+      }, 2000);
 });
